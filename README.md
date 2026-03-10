@@ -1,6 +1,8 @@
 # 🔍 HCC Reader — MetaTrader 5 History File Parser
 
+[![PyPI](https://img.shields.io/pypi/v/hcc-reader?color=blue&logo=pypi&logoColor=white)](https://pypi.org/project/hcc-reader/)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)](https://python.org)
+[![Downloads](https://img.shields.io/pypi/dm/hcc-reader?color=green)](https://pypi.org/project/hcc-reader/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?logo=windows)](https://www.microsoft.com/windows)
 
@@ -89,6 +91,12 @@ Kết quả: Tìm được OHLC cluster tại offset 0x16F4 → Open=2064.59, Hi
 ## 🚀 Cài đặt
 
 ```bash
+pip install hcc-reader
+```
+
+Hoặc cài từ source:
+
+```bash
 git clone https://github.com/hungpixi/hcc-reader.git
 cd hcc-reader
 pip install -e .
@@ -165,8 +173,7 @@ hcc-reader/
 │   ├── hcc_parser.py    # .hcc compressed file parser (M1 records)
 │   ├── scanner.py       # Auto-detect MT5 terminals
 │   └── cli.py           # Command-line interface
-├── setup.py             # pip install support
-├── requirements.txt
+├── pyproject.toml       # PyPI package config
 ├── LICENSE
 └── README.md
 ```

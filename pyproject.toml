@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hcc-reader"
+version = "1.0.0"
+description = "Read MetaTrader 5 .hcc/.hc history files without MT5 terminal — reverse-engineered binary format parser"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "Pham Phu Nguyen Hung", email = "hungphamphunguyen@gmail.com"},
+]
+keywords = [
+    "metatrader5", "mt5", "hcc", "forex", "trading",
+    "historical-data", "ohlc", "candlestick", "xauusd", "gold",
+    "binary-parser", "reverse-engineering", "financial-data",
+    "metatrader", "mql5", "exness", "broker",
+    "tick-data", "price-data", "market-data",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = [
+    "pandas>=1.5.0",
+    "click>=8.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/hungpixi/hcc-reader"
+Documentation = "https://github.com/hungpixi/hcc-reader#-sử-dụng"
+Repository = "https://github.com/hungpixi/hcc-reader"
+Issues = "https://github.com/hungpixi/hcc-reader/issues"
+Changelog = "https://github.com/hungpixi/hcc-reader/releases"
+"Comarai - AI Agency" = "https://comarai.com"
+
+[project.scripts]
+hcc-reader = "hcc_reader.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["hcc_reader*"]
